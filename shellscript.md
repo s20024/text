@@ -1,3 +1,9 @@
+# 基本 head 
+```shellscript
+#!/bin/sh
+```
+
+*****
 # 引数を変数に代入
 ```shellscript
 hoge=$1 # hogeに引数が渡される
@@ -26,7 +32,7 @@ echo "$hoge"
 
 *****
 ---
-# loop ループ　for
+# loop ループ for
 #### for
 ```shellscript
 for 変数 in 1 2 3
@@ -45,7 +51,7 @@ do
 done
 ```
 - <font color="red">注意点</font>
-    > 引数1は始まり　引数2はステップ　引数3は終わり
+    > seqコマンドの 引数1は始まり 引数2はステップ 引数3は終わり
 
 *****
 ---
@@ -79,11 +85,6 @@ read -p "入力時のコメント" 変数
 # 変数に入力値を代入する
 ```
 
-# 基本 head 
-```shellscript
-#!/bin/sh
-```
-
 *****
 ---
 # sleep 秒間　時間
@@ -91,3 +92,17 @@ read -p "入力時のコメント" 変数
 ```shellscript
 sleep 数値
 ```
+
+*****
+---
+### エラー処理 error
+```shellscript
+if [ $? -ne 0 ] ; then
+    # エラーが出た場合の処理
+fi
+```
+- <font color="red">注意点</font>
+    > 「$?」はその前の処理でエラーが出たか判別してくれいるもの
+    > エラーが出た場合でもそのエラー結果はコンソール上に表示される
+
+
