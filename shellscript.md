@@ -41,7 +41,7 @@ do
 done
 ```
 - <font color="red">注意点</font>
-    > 1 2 3 の順でiに代入される
+    > 1 2 3 の順で変数に代入される
 
 #### for 多分こんな感じで使う
 ```shellscript
