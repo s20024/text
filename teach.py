@@ -23,9 +23,8 @@ elif language in ["text", "test"]:
     file_name = "text.md"
 elif language in ["it", "IT", "acvance"]:
     file_name = "internet.md"
-elif language in ["study", "std", "time"]:
-    os.system("python3 ../study/test.py")
-    sys.exit()
+elif language in ["shellscript", "ss", "sh"]:
+    fine_name = "shellscript.md"
 else:
     sys.exit()
 
