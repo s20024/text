@@ -86,3 +86,24 @@ mv ~/Downloads/generate.vim ~/VagrantBox/vccw/
 cp /vagrant/generate.vim ~/.config/nvim/init.vim
 ```
 init.vimに書き換えする
+
+
+*****
+---
+# java授業のgit
+#### pullの仕方
+```
+cd java.2020/
+git checkout master
+git pull origin master
+git checkout s20024
+git merge master
+```
+#### pushの仕方
+
+```
+git branch #自分のブランチの確認
+git add # ファイル名
+git commit -m ""
+git push origin s20024
+```
