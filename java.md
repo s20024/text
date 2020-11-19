@@ -105,3 +105,25 @@ for (int i = 0; i < 10; i ++){
 for (型 変数名: リスト名){
     // 変数にリスト要素がひとつづつ入る
 }
+```
+
+*****
+---
+# 四捨五入
+```java
+Math.round(数値１/数値２);
+```
+- <font color="red">注意点</font>
+    > 数値１にdouble型を入れる
+
+*****
+---
+# double to int
+```java
+double hoge;
+(int)hoge; // ここでint型で数値が返される
+```
+
+*****
+---
+# 
