@@ -140,3 +140,14 @@ Integer.toString(b);
 
 *****
 ---
+# binarystring binary 2進数表記
+```java
+String ret = String.format("%8s", Integer.toBinaryString(値 & 0xFF)).replace(' ', '0');
+```
+- <font color="red">注意点</font>
+    > %8sのところの数字で、0で埋める数を指定。
+    > 0xFFのところのFFのところでビットの表せる数を16進数で指定
+
+*****
+---
+# 
