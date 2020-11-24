@@ -126,4 +126,11 @@ double hoge;
 
 *****
 ---
+#  int to string
+```java
+Integer.valueOf(数値).intValue();
+```
+
+*****
+---
 # 
