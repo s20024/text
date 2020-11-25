@@ -135,7 +135,7 @@ Integer.valueOf(文字).intValue();
 ---
 # int to string
 ```java
-Integer.toString(b);
+Integer.toString(数値);
 ```
 
 *****
