@@ -17,19 +17,19 @@ System.out.printf("x=%d", x); // %dのところにxを代入。pythonのf関数�
 # ArrayList array list arraylist
 #### listサイズを変更できるリスト
 ```java
-import java.util.ArrayList; //ArrayListのインポート
+import java.util.ArrayList; // ArrayListのインポート
 
 ArrayList<型> 変数 = new ArrayList<型>();
 ```
 
 #### ⇓String型で例える⇓
 ```java
-import java.util.ArrayList; //ArrayListのインポート
+import java.util.ArrayList; // ArrayListのインポート
 
-ArrayList<String> hoge = new ArrayList<String>(); //hogeというArrayListの作成
+ArrayList<String> hoge = new ArrayList<String>(); // hogeというArrayListの作成
 
 // addでリストの追加
-hoge.add("huga"); //hogeにhugaを追加
+hoge.add("huga"); // hogeにhugaを追加
 
 // setでリストの上書きインデックス番号の次に変更したい文字
 hoge.set(1, "hugahuga"); // hugaをhugahugaに変更
@@ -126,7 +126,7 @@ double hoge;
 
 *****
 ---
-#  string to int
+# string to int
 ```java
 Integer.valueOf(文字).intValue();
 ```
@@ -150,4 +150,18 @@ String ret = String.format("%8s", Integer.toBinaryString(値 & 0xFF)).replace(' 
 
 *****
 ---
-# 
+# 条件式 変数 代入
+### 条件分岐で、変数に代入する方法
+```java
+変数 = 条件式 ? 式1 : 式2;
+```
+- <font color="red">注意点</font>
+    > 条件式が成り立ったら変数に式１を代入
+    > 成り立たなかったら式２を代入
+
+### 実際に描くやつ⇓
+```
+String str = (hoge < huga) ? "hogeはhugaより小さい": "hogeはhugaより大きい";
+```
+
+
