@@ -110,7 +110,7 @@ str(数値)
 
 ### string to int
 ```python
-int(文字)
+int("文字")
 ```
 
 ### float to int
@@ -136,6 +136,7 @@ set(リスト名)
 *****
 ---
 # 四捨五入
+#### 四捨五入した結果を返す関数
 ```python
 import math
 def mround(x, d=0):
@@ -169,26 +170,26 @@ else:
 # file ファイル操作
 #### ファイルの読み込み
 ```python
-with open(ファイル名, "r") as f:
+with open("ファイル名", "r") as f:
     data = f.read()
 ```
 #### ファイルの書き込み
 ```python
-with open(ファイル名, "w") as f:
-    f.write(文字)
+with open("ファイル名", "w") as f:
+    f.write("文字")
 ```
 
 #### ファイルの追記
 ```python
-with open(ファイル名, "a") as f:
-    f.write(文字)
+with open("ファイル名", "a") as f:
+    f.write("文字")
 ```
 
 *****
 ---
 # 文字の置き換え replace
 ```python
-文字.replace(変換したい文字, 変換後の文字)
+"文字".replace("変換したい文字", "変換後の文字")
 ```
 
 *****
@@ -200,7 +201,8 @@ response = requests.get(取得したいところのURL)
 response.encoding = response.apparent_encoding
 html = response.text
 soup = BeautifulSoup(html, "html.parser")
-data = soup.find_all(取得したいタグ名) # dataにタグタイプのものが入る
+data = soup.find_all("取得したいタグ名") # dataにタグタイプのものが入る
+# 複数のタグを指定する場合 soup.find_all(["a", "b"]) a, b  はタグ名
 ```
 
 *****
@@ -218,7 +220,7 @@ std_out, std_err = proc.communicate()
 ls_file_name = std_out.decode("utf-8").rstrip().split("\n") 
 ```
 
-###　コマンド結果を返す関数
+### コマンド結果を返す関数
 ```python
 import subprocess
 def return_cmd(command):
@@ -226,3 +228,7 @@ def return_cmd(command):
         command, stdout=subprocess.PIPE, shell=True
     ).stdout.readlines()[0]
 ```
+
+*****
+---
+# 
