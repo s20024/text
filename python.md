@@ -207,6 +207,28 @@ data = soup.find_all("取得したいタグ名") # dataにタグタイプのも�
 # 複数のタグを指定する場合 soup.find_all(["a", "b"]) a, b  はタグ名
 ```
 
+# 文字の取得
+```python
+str(type(hoge)) = "<class 'bs4.element.Tag'>"
+hoge.string
+```
+> hogeのタイプがタグだった場合、そのタグ内の文字を取得
+
+#### タグ内の複数のタグを分別する
+```python
+list(i.children)
+```
+
+#### こんな感じで使う⇓
+```python
+# jがタグタイプの場合
+if str(type(j)) == "<class 'bs4.element.Tag'>":
+    if j.string != None:
+        data_eployment.append(j.string)
+    elif j != ' ':
+        data_eployment.append(j)
+```
+
 *****
 ---
 # osの実行結果を取得する
@@ -233,4 +255,9 @@ def return_cmd(command):
 
 *****
 ---
-# 
+# 文字列が数値かどうかの判定 isnumeric()
+```python
+'数値or文字'.isnumeric()
+```
+- <font color="red">注意点</font>
+    > True か False を返す
