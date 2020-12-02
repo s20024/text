@@ -107,3 +107,12 @@ git add # ファイル名
 git commit -m ""
 git push origin s20024
 ```
+
+```
+vagrant box add generic/ubuntu2004
+sed -i -e 's/ # \(config.vm.network "forwarded_port".*\)$/ \1/' Vagrantfile
+vagrant box update
+vagrant up
+vagrant ssh
+vagrant halt
+```
