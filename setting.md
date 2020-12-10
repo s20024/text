@@ -121,3 +121,26 @@ vagrant halt
 sudo PORT=80 npm start
 ```
 
+
+
+```
+create-react-app react_lesson
+```
+# ウェブパックのダウンロード
+```
+mkdir hello_react
+cd hello_react
+npm init -y
+npm install react react-dom
+npm install -D webpack webpack-cli webpack-dev-server
+npm install -D @babel/core @babel/cli @babel/preset-env @babel/preset-react
+npm install -D eslint eslint-loader eslint-plugin-react
+npm install -D css-loader style-loader babel-loader
+mkdir -p test/{src,dist}
+nvim test/src/testBabel.js # add関数を作ってみる
+nvim .babelrc
+alias babel="node ./node_modules/@babel/cli/bin/babel.js"
+nvim test/src/testEslint.js
+alias eslint="node ./node_modules/eslint/bin/eslint.js"
+eslint --init
+```
