@@ -116,3 +116,8 @@ vagrant up
 vagrant ssh
 vagrant halt
 ```
+
+```
+sudo PORT=80 npm start
+```
+
