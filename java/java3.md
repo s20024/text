@@ -70,19 +70,45 @@
     |     | break          |     | 
     |     | }              |     | 
 
+    ```java
+    int a = 1;
+    switch(a) {
+        case 1:
+            System.out.println("one");
+            break;
+        case 2:
+            System.out.println("two");
+            break;
+        default:
+            System.out.println("other");
+            break;
+    }
+    ```
+    のように記述
+    - <font color="red">注意点</font>
+        > break;を描かないと最後まで処理する
+
 
 # 繰り返し
 
 1. 繰り返し構文  
-for文　条件式である限り、繰り返し処理実行
-    ```java
-    for (初期化設定; 条件式; 遷移式){
-        // 条件がTrueの時の処理
-    }
-    ```
-    初期化式条件式遷移式は省略可可能、ただし、セミコロンは必要  
+### for文　
+条件式である限り、繰り返し処理実行
+```java
+for (初期化設定; 条件式; 遷移式){
+    // 条件がTrueの時の処理
+}
+```
+初期化式条件式遷移式は省略可可能、ただし、セミコロンは必要  
+⇓⇓⇓例⇓⇓⇓
+```java
+int i = 0;
+for (; i < 11; i + 2){
+    System.out.println(i);
+}
+```
 
-    ### トレース表
+### トレース表
     (場合分けをすべて書く)
 
     | 外j | 内i | 結果          | 
@@ -98,14 +124,30 @@ for文　条件式である限り、繰り返し処理実行
     | 2   | 2   | +++\n+++\n+++ |  
     
     このトレース表のやつ⇓⇓
-    ```java
-    for (int i = 0; i < 3; i++) {
-		for (int j = 0; j < 3; j ++) {
-			System.out.print("+");
-		}
-		System.out.println();
+```java
+for (int i = 0; i < 3; i++) {
+	for (int j = 0; j < 3; j ++) {
+		System.out.print("+");
 	}
+	System.out.println();
+}
+```
+### whileの場合
+- while(条件式){処理}
+    > for文と違い、回数が決まっていないものに使える。  
+    条件がtrueである場合処理を繰り返す
+
+    例⇓⇓⇓
+    ```java
+    int i = 0;
+    while (i < 3){
+        //繰り返したい処理
+        i++;
+    }
     ```
+
+
+
 
 
 
