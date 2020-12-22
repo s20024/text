@@ -282,7 +282,7 @@ const hoge = [1, 5, 3, 12];
 
 // sort 並び替え
 hoge.sort(); // 文字として並び替える　=> hoge = [1, 12, 3, 5]
-hoge.sort((a, b) => a < b); // 数字として並び替え
+hoge.sort((a, b) => a - b); // 数字として並び替え
 
 // reverse 反転
 hoge.reverse(); // 反転
