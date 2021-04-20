@@ -53,17 +53,7 @@ if len(total) == 0:
 # 単語が入っていた場合
 
 # データをパッシングに挿入
-with open("../../passing/passing.md", mode="w") as f:
+with open("./tem.md", mode="w") as f:
     f.write("\n---\n".join(total))
 
-# OSがWindowsなのかUbuntuなのかを取得
-with open("../../osname.txt", "r") as f:
-    os_name = f.read()
-
-# OSがUbuntuだった場合
-if os_name == "Ubuntu":
-    os.system("typora ../../passing/passing.md &")
-
-# OSがWindowsだった場合
-else:
-    os.system("code ../../passing/passing.md")
+os.system("typora ../../passing/passing.md &")
