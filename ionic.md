@@ -150,30 +150,28 @@ Swiper.use([Controller, Thumbs]);
 export class Page {
   constructor() {}
   ionViewDidEnter() {
-    setTimeout(() => {
-      const mainSlides = document.querySelectorAll('.main-swiper .swiper-slide');
-      const thumbSlides = document.querySelectorAll('.thumb-swiper .swiper-slide');
-      const mainSwiper = new Swiper('.main-swiper',{ 
-        loop:true,
-        loopedSlides:mainSlides.length,
-        effect:'fade',    
-        fadeEffect:{
-          crossFade:true
-        }
-      });
-      const thumbSwiper = new Swiper('.thumb-swiper',{ 
-        slidesPerView:'auto',
-        spaceBetween:20,
-        centeredSlides:true,
-        loop:true,
-        loopedSlides:thumbSlides.length,
-        slideToClickedSlide:true,
-        controller:{
-          control: mainSwiper
-        }
-      });
-      mainSwiper.controller.control = thumbSwiper;
-    }, 500);
+    const mainSlides = document.querySelectorAll('.main-swiper .swiper-slide');
+    const thumbSlides = document.querySelectorAll('.thumb-swiper .swiper-slide');
+    const mainSwiper = new Swiper('.main-swiper',{ 
+      loop:true,
+      loopedSlides:mainSlides.length,
+      effect:'fade',    
+      fadeEffect:{
+        crossFade:true
+      }
+    });
+    const thumbSwiper = new Swiper('.thumb-swiper',{ 
+      slidesPerView:'auto',
+      spaceBetween:20,
+      centeredSlides:true,
+      loop:true,
+      loopedSlides:thumbSlides.length,
+      slideToClickedSlide:true,
+      controller:{
+        control: mainSwiper
+      }
+    });
+    mainSwiper.controller.control = thumbSwiper;
   }
 }
 ```
