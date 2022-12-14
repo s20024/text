@@ -324,3 +324,6 @@ style.scss
   }
 }
 ```
+
+scssでの違いは多分: https://kiomiru.co.jp/blog/coding/swiper-js/
+をみた方がいい
